@@ -21,9 +21,9 @@
         <nav>
             <ul>
                 <li><a href = "#">home</a></li>
-                <li><a href = "blog.html"></a></li>
-                <li><a href = "gallery.html"></a></li>
-                <li><a href = "about.htlm"></a></li>
+                <li><a href = "blog.html">blog</a></li>
+                <li><a href = "gallery.html">gallery</a></li>
+                <li><a href = "about.htlm">about</a></li>
             </ul>
         </nav>
 
@@ -39,15 +39,83 @@
                     <h2>h2</h2>
                 </hgroup>
             </header>
+<!--the header ends here.-->
+
+<!--canvas-->
+            <img id = "cat" src = "images/cat.png" alt = "sleeping cat"/>
+            <canvas id = "e" width = "177" height = "113"></canvas>
+            <script>
+                window.onload = function() {
+                    var canvas = document.getElementById("e");
+                    var context = canvas.getContext("2d");
+                    var cat = document.getElementById("cat");
+                    context.drawImage(cat, 0, 0);
+                }
+            </script>
+            <!--or create in JavaScript way.-->
+            <script>
+                var canvas = document.getElementById("e");
+                var context = canvas.getContext("2d");
+                var cat = new Image();
+                cat.src = "images/cat.png";
+                cat.onload = function() {
+                    for (var x = 0, y = 0; x < 500 && y < 375; x += 50, y += 37){
+                        context.drawImage(cat, x, y, 88, 56);
+                        <!--88, 56 is the scale of the image.-->
+                    }
+                }
+            </script>
+
+<!--video-->
+            <!--standard format that you should code.-->
+            <video id = "movie" width = "320" height = "240" preload controls>
+                <source src = "name.mp4" type = 'video/mp4; codecs = "avc1.42E01E, mp4a.40.2"' />
+                <source src = "name.webm" type = 'video/webm; codecs = "vp8, vorbis"' />
+                <source src = "name.ogv" type = 'video/ogg; codecs = "theora, vorbis"' />
+                <object width = "320" height = "240" type = 
+                    "application/x-shockwave-flash" data = "flowplayer-3.2.1.swf">
+                    <param name = "movie" value = "flowplayer-3.2.1.swf" />
+                    <param name = "allowfullscreen" value = "true" />
+                    <param nuam = "flashvars" value = 'config = {
+                        "clip":{
+                        "url": "http://wearehugh.com/dih5/good/bbb_480p.mp4",
+                        "autoPlay": false, "autoBuffering": true
+                        }
+                    }' />
+                    <p>Download video as <a href = "name.mp4">MP4</a>, 
+                        <a href = "name.webm">Webm</a>, or
+                        <a href = "name.ogv">Ogv</a>.
+                    </p>
+                </object>
+            </video>
             <footer>
                 <nav>
                     <h1>Navigation</h1>
                     <ul>
-                        <li></li>
+                        <li><a href = "#">Home</a></li>
+                        <li><a href = "#">Standards</a></li>
+                        <li><a href = "#">Participate</a></li>
+                        <li><a href = "#">Membership</a></li>
+                        <li><a href = "#">About W3C</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h1>Contact W3C</h1>
+                    <ul>
+                        <li><a href = "#">Contact</a></li>
+                        <li><a href = "#">Help and FAQ</a></li>
+                        <li><a href = "#">Donate</a></li>
+                        <li><a href = "#">Site Map</a></li>
                     </ul>
                 </nav>
                 <section>
+                    <h1>W3C Updates</h1>
+                    <ul>
+                        <li><a href = "#">Twitter</a></li>
+                        <li><a href = "#">Identi.ca</a></li>
+                    </ul>
                 </section>
+                <p class = "copyright">Copyright @2013 W3C</p>
             </footer>
         </article>
 
@@ -159,6 +227,16 @@ such as Apple QuickTime or Adobe Flash.
     HTML5 video where available, but falls back to QuickTime or Flash in older 
     browser. This solution uses no JavaScript whatsoever, and it works in 
     virtually every browser, including mobile browsers.
+  - For maximum compatibility, here's what your video workflow will look like:
+        1. Make one version that uses Theora video and Vorbis audio in an Ogg 
+           container.
+        2. Make another version that uses WebM(VP8 + Vorbis).
+        3. Make another version that use H.264 Baseline video and AAC 
+           low-complexity audio in an MP4 container.
+        4. Link to all three video files from a single <video> element, and fall 
+           back to a Flash-based video player.
+
+
 
 #LocalStorage - HTML5 Storage provides a way for websites to store information 
 on your computer and retrieve it later. The concept is similar to cookies, but 
