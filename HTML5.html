@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!--
     kmax: The declaration must be in the first line and should not contain any blank
           space. However, blank space will be ignored any other place except the
@@ -12,7 +12,7 @@
         <!--kmax: Drop the type value because there is only css to decorate the page.-->
         <title>Dive Into HTML5</title>
         <!--[if lt IE 9]>
-        <script  src = 
+        <script  src =
             "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <!--kmax: To create the new elements which not exist in previous IE.-->
@@ -29,7 +29,7 @@
 
 
         <!--kmax: To talk about the embedded article here.-->
-        <article> 
+        <article>
             <header>
                 <time datetime = "2013-03-23T22:30:59-34:00" pubdate>
                     March 23, 2013 22:30pm EDT
@@ -72,7 +72,7 @@
                 <source src = "name.mp4" type = 'video/mp4; codecs = "avc1.42E01E, mp4a.40.2"' />
                 <source src = "name.webm" type = 'video/webm; codecs = "vp8, vorbis"' />
                 <source src = "name.ogv" type = 'video/ogg; codecs = "theora, vorbis"' />
-                <object width = "320" height = "240" type = 
+                <object width = "320" height = "240" type =
                     "application/x-shockwave-flash" data = "flowplayer-3.2.1.swf">
                     <param name = "movie" value = "flowplayer-3.2.1.swf" />
                     <param name = "allowfullscreen" value = "true" />
@@ -82,7 +82,7 @@
                         "autoPlay": false, "autoBuffering": true
                         }
                     }' />
-                    <p>Download video as <a href = "name.mp4">MP4</a>, 
+                    <p>Download video as <a href = "name.mp4">MP4</a>,
                         <a href = "name.webm">Webm</a>, or
                         <a href = "name.ogv">Ogv</a>.
                     </p>
@@ -131,15 +131,15 @@
 #HTML development:
     ->1997 W3C published HTML4.0 and promptly shutdown the HTML Working Group.
     ->Less than 2 months later, a seperate W3C Working Group published XML1.0.
-    ->Three months after that, the W3C held a workshop called "Shaping the Future 
-      of HTML" to answer the question, "Has W3C given up on HTML?" This was the 
+    ->Three months after that, the W3C held a workshop called "Shaping the Future
+      of HTML" to answer the question, "Has W3C given up on HTML?" This was the
       answer:
-          In discussion, it was agreed that further extending HTML4.0 would be 
-          difficult, as would converting 4.0 to be an XML application. The 
-          proposed way to break free of these restrictions is to make a fresh 
+          In discussion, it was agreed that further extending HTML4.0 would be
+          difficult, as would converting 4.0 to be an XML application. The
+          proposed way to break free of these restrictions is to make a fresh
           start with the next generation of HTML based upon a suite of XML tag-sets.
     -> XHTML1.0 + Appendix C
-    -> XHTML1.1 eliminate the Appendix C 
+    -> XHTML1.1 eliminate the Appendix C
     -> Appendix C - down to html, loophole to escape the "draconian error handling"
     -> Actually, web pages claim to be XHTML are not using XHTML, still HTML.
     ->
@@ -154,12 +154,12 @@
           Scripting is here to say.
           Device-specific profiling should be avoided.
           Open process.
-    -> A question was asked, "Should the W3C develop declarative extensions to 
-       HTML and CSS and imperative extensions to DOM, to address medium level 
-       Web Applications requirements, as opposed to sophisticated, fully-fledged 
+    -> A question was asked, "Should the W3C develop declarative extensions to
+       HTML and CSS and imperative extensions to DOM, to address medium level
+       Web Applications requirements, as opposed to sophisticated, fully-fledged
        OS-level APIs?" The vote was 11 to 8 against.
     -> And WHAT Working Group was born.
-         The Web Hypertext Applications Technology Working Group is a loose, unofficial 
+         The Web Hypertext Applications Technology Working Group is a loose, unofficial
          and open collaboration of Web browser manufacturers and interested parties.
     -> The create Web Forms 2.0, Web Application 1.0.
     -> W3C - Never-finalized XHTML2.0 continued the tradition of requiring DEH.
@@ -170,13 +170,13 @@
 Clear some concepts:
 
 #W3C
-The World Wide Web Consortium (W3C) is an international community where Member 
-organizations, a full-time staff, and the public work together to develop Web 
-standards. Led by Web inventor Tim Berners-Lee and CEO Jeffrey Jaffe, W3C's 
+The World Wide Web Consortium (W3C) is an international community where Member
+organizations, a full-time staff, and the public work together to develop Web
+standards. Led by Web inventor Tim Berners-Lee and CEO Jeffrey Jaffe, W3C's
 mission is to lead the Web to its full potential.
 
-#MIME 
-Multipurpose Internet Mail Extensions (MIME) is an Internet standard that 
+#MIME
+Multipurpose Internet Mail Extensions (MIME) is an Internet standard that
 extends the format of email to support:
     •Text in character sets other than ASCII
     •Non-text attachments
@@ -190,115 +190,151 @@ extends the format of email to support:
 #How HTML5 came to be.
     Implementations and specifications have to do a delicate dance together.
     // 标准和实现之间的矛盾
-    Standards are hard to be made. 
+    Standards are hard to be made.
         - Eg. 17-year-old conversation == a simple HTML element <img>
 
-#Browsers have always been "forgving" with HTML. And because of that, by some 
-estimates, over 99 persent of HTML pages on the Web today have at least one 
+#Browsers have always been "forgving" with HTML. And because of that, by some
+estimates, over 99 persent of HTML pages on the Web today have at least one
 error in them. - "Everything you know about xhtml is wrong."
 
-#Every time your web browser requests a page, the web server sends a numbers of 
-headers before it sends the actual page markup. These headers are normally 
-invisible, although there are a number of web development tools that will make 
-them visible if you're interested. The headers are important, because they tell 
-your browser how to interpret the page markup that follows. The most important 
+#Every time your web browser requests a page, the web server sends a numbers of
+headers before it sends the actual page markup. These headers are normally
+invisible, although there are a number of web development tools that will make
+them visible if you're interested. The headers are important, because they tell
+your browser how to interpret the page markup that follows. The most important
 header is called Content-Type, and it looks like this:
     Content-Type: text/html
-text/html is called the "content type" or "MIME type" of the page. This header 
-is the ONLY thing that determines what a particular resource truly is, and 
+text/html is called the "content type" or "MIME type" of the page. This header
+is the ONLY thing that determines what a particular resource truly is, and
 therefore how it should be rendered.
 
 
 #HTML5 is not a big thing; it is a collection of individual features.
  You can detect support for individual features, like canvas, video and so on.
 
-#Canvas - HTML5 defines the <canvas> element as "a resolution-dependent bitmap 
-canvas which can be used for rendering graphs, game graphics, or other visual 
-imaes on the fly." A canvas is a rectangle in your page within which you can 
-use JavaScript to draw anything you want. HTML5 defines a set of functions("the 
-canvas API") for drawing shapes, defining paths, creating gradients, and 
+#Canvas - HTML5 defines the <canvas> element as "a resolution-dependent bitmap
+canvas which can be used for rendering graphs, game graphics, or other visual
+imaes on the fly." A canvas is a rectangle in your page within which you can
+use JavaScript to draw anything you want. HTML5 defines a set of functions("the
+canvas API") for drawing shapes, defining paths, creating gradients, and
 applying transformations.
-  - You can use the double-negative trick to force the result to a Boolean value 
+  - You can use the double-negative trick to force the result to a Boolean value
     return !!document.createElement('canvas').getContext;
   - webGL - 3d openGL // wait to complete.
 
-#Video - HTML5 defines a new element called <video> for embedding video in your 
-web pages. Embedding video used to be impossible without third-party plug-ins 
+#Video - HTML5 defines a new element called <video> for embedding video in your
+web pages. Embedding video used to be impossible without third-party plug-ins
 such as Apple QuickTime or Adobe Flash.
-  - Kroc Camen has designed a solution called "Video for Everybody!" that uses 
-    HTML5 video where available, but falls back to QuickTime or Flash in older 
-    browser. This solution uses no JavaScript whatsoever, and it works in 
+  - Kroc Camen has designed a solution called "Video for Everybody!" that uses
+    HTML5 video where available, but falls back to QuickTime or Flash in older
+    browser. This solution uses no JavaScript whatsoever, and it works in
     virtually every browser, including mobile browsers.
   - For maximum compatibility, here's what your video workflow will look like:
-        1. Make one version that uses Theora video and Vorbis audio in an Ogg 
+        1. Make one version that uses Theora video and Vorbis audio in an Ogg
            container.
         2. Make another version that uses WebM(VP8 + Vorbis).
-        3. Make another version that use H.264 Baseline video and AAC 
+        3. Make another version that use H.264 Baseline video and AAC
            low-complexity audio in an MP4 container.
-        4. Link to all three video files from a single <video> element, and fall 
+        4. Link to all three video files from a single <video> element, and fall
            back to a Flash-based video player.
 
 
 // standard of application
-#LocalStorage - HTML5 Storage provides a way for websites to store information 
-on your computer and retrieve it later. The concept is similar to cookies, but 
-it's designed for larger quantities of information. Cookies are limited in size, 
-and your browser sends them back to the web server every time it requests a new 
-page (which takes extra time and precious bandwidth). HTML5 Storage stays on 
+#LocalStorage - HTML5 Storage provides a way for websites to store information
+on your computer and retrieve it later. The concept is similar to cookies, but
+it's designed for larger quantities of information. Cookies are limited in size,
+and your browser sends them back to the web server every time it requests a new
+page (which takes extra time and precious bandwidth). HTML5 Storage stays on
 your computer, and websites can access it with JavaScript after the page is loaded.
-    Within your browser, any website can read and modify its own values, but sites 
+
+    5MB
+
+    Within your browser, any website can read and modify its own values, but sites
     can't access values stored by other sites. == same-origin restriction.
 
-#Web Workers - provide a standard way for browsers to run JavaScript in the 
-background. With web workers, you can spawn multiple "threads" that all run at 
+    function supports_html5_storage() {
+        return ('localStorage' in window) && window['localStorage'] !== null;
+    }
+    // javascript's style
+    var foo = localStorage.getItem("bar");
+    localStorage.setItem("bar", foo);
+    var foo = localStorage["bar"];
+    localStorage["bar"] = foo;
+
+    SQLite
+    // js to manage the backend database
+    openDatabase('documents', '1.0', 'local document storage', 5*1024)1024, 
+    function (db) {
+        db.changeVersion('', '1.0', function(t) {
+            t.executeSql('CREATE TABLE docids (id, name)');
+        }, error);
+    });
+
+#Web Workers - provide a standard way for browsers to run JavaScript in the
+background. With web workers, you can spawn multiple "threads" that all run at
 the same time, more or less.
-    These "background threads" can do complex mathematical calculations, make 
-    network requests, or access local storage while the main web page responds 
+    These "background threads" can do complex mathematical calculations, make
+    network requests, or access local storage while the main web page responds
     to the user scrolling, clicking, or typing.
 
-#Offline Web Applications - Thanks to HTML5, anyone can build a web application 
+#Offline Web Applications - Thanks to HTML5, anyone can build a web application
 that works offline.
-    Once your browser downloads all the necessary files, you can revisit the 
-    website even if you're not connected to the Internet. Your browser will 
-    notice that you're offline and use the file it has already downloaded. When 
-    you get back online, any changes you've made can be uploaded to the remote 
+    Once your browser downloads all the necessary files, you can revisit the
+    website even if you're not connected to the Internet. Your browser will
+    notice that you're offline and use the file it has already downloaded. When
+    you get back online, any changes you've made can be uploaded to the remote
     web server.
 
 #Geolocation - is the art of figuring out where you are in the world and (optionally)
-sharing that information with people you trust. There are many ways to figure 
-out where you are - your IP address, your wireless network connection, which 
-cell tower your phone is talking to, or dedicated GPS hardware that receives 
+sharing that information with people you trust. There are many ways to figure
+out where you are - your IP address, your wireless network connection, which
+cell tower your phone is talking to, or dedicated GPS hardware that receives
 latitude and logitude information from satellites in the sky.
-    Geolocation is being standardized by the Geolocation Working Group, which is 
-    separate from the HTML5 Working Group. But it is part of the evolution of 
+    Geolocation is being standardized by the Geolocation Working Group, which is
+    separate from the HTML5 Working Group. But it is part of the evolution of
     the Web that's happening now.
-    If your browser does not support the geolocation API natively, there is 
-    still hope. Gears is an open source browser plug-in from Google that works 
-    on Windows, Mac, Linux, Windows Mobile, and Android. It provides a number of 
+    If your browser does not support the geolocation API natively, there is
+    still hope. Gears is an open source browser plug-in from Google that works
+    on Windows, Mac, Linux, Windows Mobile, and Android. It provides a number of
     features for older browsers that do not support all the fancy new stuff.
     And one of the features that Gears provides is a geolocation API.
 
+    function get_location() {
+        navigator.geolocation.getCurrentPosition(show_map);
+    }
+    function show_map() {
+        var latitude = position.coord.latitude;
+        var longitude = position.coord.longitude;
+        var altitude = position.coord.altitude;
+        // And you can do something you want here as you have got the position.
+    }
+    geo.js for IE.
+
 #Input Types - many new input types
 
-#Placeholder Text - is displayed inside the input field as long as the field is 
-empty and not focused. As soon as you click on (or tab to) the input field, the 
+#Placeholder Text - is displayed inside the input field as long as the field is
+empty and not focused. As soon as you click on (or tab to) the input field, the
 placeholder texts disappears.
 
-#Form Autofocus - moves the focus to a particular input field. But because it's 
+#Form Autofocus - moves the focus to a particular input field. But because it's
 just markup instead of a script, the behavior will be consistent across all websites.
-Also, browser vendors(or extension authors) can offer users a way to disable the 
+Also, browser vendors(or extension authors) can offer users a way to disable the
 autofocusing behavior.
 
-#Microdata - is a standardized way to provide additional semantics in your web 
-pages. For example, you can use microdata to declare that a photograph is 
+#Microdata - is a standardized way to provide additional semantics in your web
+pages. For example, you can use microdata to declare that a photograph is
 available under a specific Creative Common license.
 
-//
-#Web Socket
+#WebSockets - WebSockets is a technique for two-way communication over one (TCP)
+socket, a type of PUSH technology. At the moment, it's still being standardized
+by the W3C; however, the lateset versions of Chrome and Safari have support for
+WebSockets.
 
 //
 #Framework
 
+//
+#Local Application: Android
 
 
 
@@ -310,15 +346,3 @@ available under a specific Creative Common license.
 W3C计划在2014年完成HTML5标准。
 
 -->
-
-
-
-
-
-
-
-
-
-
-
-
