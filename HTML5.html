@@ -28,7 +28,7 @@
         </nav>
 
         <link itemprop="url" href="http://en.wikipedia.org/wiki/The_Catcher_in_the_Rye" />asd
-        
+
 
         <!--kmax: To talk about the embedded article here.-->
         <article>
@@ -104,7 +104,7 @@
                 <input type = "url" placeholder = "url-type" />
                 <input type = "number" placeholder = "number-type" min = "0" max = "10" step = "2" value = "6" />
                 <input type = "range" min = "0" max = "10" step = "2" value = "6" />
-                <input type = "submit" /> 
+                <input type = "submit" />
                 <br />
                 <input type = "date" />
                 <input type = "month" />
@@ -246,10 +246,10 @@ canvas API") for drawing shapes, defining paths, creating gradients, and
 applying transformations.
   - You can use the double-negative trick to force the result to a Boolean value
     return !!document.createElement('canvas').getContext;
-  - webGL - 3d effects from openGL 
-    WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 3D 
-    graphics and 2D graphics[2] within any compatible web browser without the use of 
-    plug-ins. 
+  - webGL - 3d effects from openGL
+    WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 3D
+    graphics and 2D graphics[2] within any compatible web browser without the use of
+    plug-ins.
 
 #Video - HTML5 defines a new element called <video> for embedding video in your
 web pages. Embedding video used to be impossible without third-party plug-ins
@@ -292,7 +292,7 @@ your computer, and websites can access it with JavaScript after the page is load
 
     SQLite
     // js to manage the backend database
-    openDatabase('documents', '1.0', 'local document storage', 5*1024)1024, 
+    openDatabase('documents', '1.0', 'local document storage', 5*1024)1024,
     function (db) {
         db.changeVersion('', '1.0', function(t) {
             t.executeSql('CREATE TABLE docids (id, name)');
@@ -314,10 +314,10 @@ that works offline.
     you get back online, any changes you've made can be uploaded to the remote
     web server.
 
-    A web browser that implements HTML5 offlne applications will read the list 
-    of URLs from the manifest file, download the resources, cache them locally, 
-    and automatically keep the local copies up to date as they change. When you 
-    try to access the web application without a network connection, your web 
+    A web browser that implements HTML5 offlne applications will read the list
+    of URLs from the manifest file, download the resources, cache them locally,
+    and automatically keep the local copies up to date as they change. When you
+    try to access the web application without a network connection, your web
     browser will automatically switch over to the local copies instead.
 
     The Cache Manifest
@@ -326,16 +326,16 @@ that works offline.
     <html manifest = "/cache.manifest">
 
     Apache-Server -> add:
-        AddType text/cache-manifest .manifest 
+        AddType text/cache-manifest .manifest
     in the .htaccess file.
 
     CACHE MANIFEST
-        NETWORK: 
+        NETWORK:
         #Also called the online whitelist
-        #Files listed in this section will not be loaded from the cache, but 
+        #Files listed in this section will not be loaded from the cache, but
          retrieved over the network(from the server) if online.
         #You can specify "*" to set the online whitelist wildcard flag to "open"
-         Access to resources on other origins will not be blocked. 
+         Access to resources on other origins will not be blocked.
         /tracking.cgi - will not be downloaded.
 
         CACHE:
@@ -425,4 +425,3 @@ WebSockets.
 W3C计划在2014年完成HTML5标准。
 
 -->
-
