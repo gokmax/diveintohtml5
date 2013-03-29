@@ -27,6 +27,8 @@
             </ul>
         </nav>
 
+        <link itemprop="url" href="http://en.wikipedia.org/wiki/The_Catcher_in_the_Rye" />asd
+        
 
         <!--kmax: To talk about the embedded article here.-->
         <article>
@@ -384,6 +386,23 @@ autofocusing behavior.
 pages. For example, you can use microdata to declare that a photograph is
 available under a specific Creative Common license.
     Microdata annotates the DOM with scoped name/value pairs from custom vocabularies.
+    <div itemscope itemtype = "http://schema.org/Movie">
+        <h1 itemprop = "director">Ang Li</h1>
+    </div>
+    eg: - help the machine to understand.
+    <div itemscope itemtype = "http://schema.org/Event">
+        <div itemprop = "name">Spinal Tap</div>
+        <span itemprop = "description">One of the loudest bands ever.</span>
+        Event date.
+        <time itemprop = "startDate" datetime = "2011-05-08T19:30">May 8, 7:30pm</time>
+    </div>
+    use meta to specify the element such as img or flash object.
+    <meta itemprop = "ratingValue" content = "4"/>
+    <meta itemprop = "bestRating" content = "5" />
+
+    schema.org offers the ability to specify additional properties or sub-types to existing types.
+
+    why - for search engine and readable or understandable pages.
 
 #WebSockets - WebSockets is a technique for two-way communication over one (TCP)
 socket, a type of PUSH technology. At the moment, it's still being standardized
